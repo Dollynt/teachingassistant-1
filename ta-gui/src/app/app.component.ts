@@ -15,8 +15,11 @@ export class AppComponent {
    alunos: Aluno[] = [];
 
    gravar(a: Aluno): void {
-     this.alunoService.gravar(a);
-     this.alunos.push(a);
-     this.aluno = {nome: "", cpf: "", email: "", logingithub: ""};
+     if (this.alunoService.gravar(a)) {
+       this.alunos.push(a);
+       this.aluno = {nome: "", cpf: "", email: "", logingithub: ""};
+     } else {
+       this.aluno.cpf = "";
+     }
   }
 }
