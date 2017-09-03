@@ -22,8 +22,16 @@
    
 </tr>
 <tr>
-  <td><label>Login Github </label></td>
-  <td><input [(ngModel)]="aluno.login_github" ></td>
+  <td><label>Login Github</label></td>
+  <td><input [(ngModel)]="aluno.logingithub" ></td>
   
 </tr>
 </table>
+
+<ul>
+<li *ngFor="let a of alunos">
+    <span>{{a.nome}}</span>,
+    <span>{{a.cpf}}</span>,
+    <span>{{a.email}}</span>
+</li>
+</ul>
