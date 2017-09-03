@@ -1,6 +1,8 @@
-import { NonNullAssert } from '@angular/compiler';
+import { Injectable } from '@angular/core';
+
 import { Aluno } from './aluno';
 
+@Injectable()
 export class AlunoService {
   alunos: Aluno[] = [];
   
