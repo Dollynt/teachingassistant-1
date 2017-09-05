@@ -20,7 +20,7 @@ export class AlunoService {
      return !this.alunos.find(a => a.cpf == cpf);
   }
 
-  atualizar(aluno:Aluno): void {
+  atualizar(aluno: Aluno): void {
     aluno = aluno.clone();
     for (let a of this.alunos) {
         if (a.cpf == aluno.cpf) {
@@ -29,5 +29,13 @@ export class AlunoService {
         }
     }
     
+  }
+
+  getAlunos(): Aluno[] {
+    var result: Aluno[] = [];
+    for (let a of this.alunos) {
+      result.push(a.clone());
+    }
+    return result;
   }
 }
