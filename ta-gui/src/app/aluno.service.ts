@@ -8,13 +8,17 @@ export class AlunoService {
   
   gravar(aluno: Aluno): Aluno | null {
     let result : Aluno | null = null;
+    aluno = aluno.clone();
     if (this.cpfNaoCadastrado(aluno.cpf)) {
       this.alunos.push(aluno);
       result = aluno;
     }
     return result;
   }
+
   cpfNaoCadastrado(cpf: string): boolean {
      return !this.alunos.find(a => a.cpf == cpf);
   }
+
+
 }

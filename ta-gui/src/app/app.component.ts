@@ -13,6 +13,7 @@ export class AppComponent {
    constructor(private alunoService: AlunoService) {}
 
    aluno: Aluno = {nome: "", cpf: "", email: "", logingithub: ""};
+   
    alunos: Aluno[] = [];
    cpfduplicado: boolean = false;
 
@@ -23,8 +24,9 @@ export class AppComponent {
      } else {
        this.cpfduplicado = true;
      }
-  }
-  onMove(): void {
+   }
+
+   onMove(): void {
       this.cpfduplicado = false;
-  }
+   }
 }
