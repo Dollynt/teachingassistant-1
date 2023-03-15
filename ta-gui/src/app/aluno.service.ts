@@ -25,7 +25,9 @@ export class AlunoService {
     for (let a of this.alunos) {
         if (a.cpf == aluno.cpf) {
            a.metas = aluno.metas;
+           
         }
     }
+    
   }
 }
